@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+</head>
+<body>
+<h1>Hello Aman!</h1>
+<p>Age: 25</p>
+<p>Email: aman@mail.com</p>
+
+<!-- Кнопка -->
+<button id="showDataBtn">Показать все данные JSON</button>
+
+<!-- Блок для JSON -->
+<div id="jsonData" style="margin-top:20px; border:1px solid #ccc; padding:10px;"></div>
+
+<script>
+    const userData = {
+        name: "Aman",
+        age: 25,
+        email: "aman@mail.com"
+    };
+
+    const btn = document.getElementById('showDataBtn');
+    const div = document.getElementById('jsonData');
+
+    btn.addEventListener('click', () => {
+        div.innerHTML = "<pre>" + JSON.stringify(userData, null, 2) + "</pre>";
+    });
+</script>
+</body>
+</html>
